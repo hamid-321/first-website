@@ -1,0 +1,365 @@
+/*	to make the scroll bar red and grey while making the scroll animation smooth*/
+html {
+	scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-track{
+	background: #282825;
+}
+::-webkit-scrollbar-thumb{
+	background: #d20a1a;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #aa0816;
+	cursor:pointer;
+}
+body {
+  background-color: #1d1d1b;
+}
+main {
+	margin-left:10px;
+	margin-right:10px;
+}
+header{
+	position: fixed;
+	top:0;
+	right:0;
+	left:0;
+	background-color:#d20a11;
+	max-width:100%;
+	height:75px;
+}
+
+
+header nav ul {
+  top:0;
+  margin-top:15px;
+  width: fit-content;
+}
+
+
+header nav ul li{
+  margin-top:auto;
+  display: inline-flex;
+  list-style: none;
+}
+
+
+
+/*when the screen is larger than 400 pixels the navigation changes*/
+@media screen and (min-width: 400px) {
+.navbutton{
+		margin-left: 6px;
+	    margin-right: 6px;
+		margin-top: -0.3vw;
+		background-color: #d20a1a;
+		border-radius: 11px;
+		padding: 7.5px 7.5px;
+		color: #ffffff;
+		font-family: 'Rubik';
+		font-size: calc(10px + 1vw);
+		text-align: center;
+		outline: none;
+		cursor: pointer;
+		box-shadow: 0 6px #000000;
+		text-shadow: 2px 2px #000000;
+}
+}
+/*when the screen is smaller than 400 pixels the navigation changes*/
+@media screen and (max-width: 400px) {
+	.navbutton
+	{
+		margin-left: 3px;
+	    margin-right: 3px;
+		left:0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		margin-top: 8px;
+		background-color: #d20a11;
+		color: #ffffff;
+		border-radius: 11px;
+		font-family: 'rubik';
+		font-size: calc(18px + calc(1vw - 10px));
+		text-align: center;
+		outline: none;
+		cursor: pointer;
+		box-shadow: 0 6px #000000;
+		text-shadow: 2px 2px #000000;
+		width: auto;
+	}
+}
+/* animation to make the nav buttons expand and change colour when they are hovered over and clicked. when clicked they depress like a physical button would*/
+.navbutton:hover{
+	transform: scale(1.05);
+	background-color: #1d1d1b;
+	transition-duration: 0.7s;
+}
+
+.navbutton:active {
+  transform: scale(1.05);
+  background-color: #1d1d1b;
+  box-shadow: 0 3px #000000;
+  transform: translateY(3px);
+  transition-duration: 0ms;
+}
+
+/* centering the buttons */
+.flex-all{
+	display: flex;
+	
+}
+
+.jc{ 
+	justify-content:left;
+	
+}
+/* to affect only the top title of each page*/
+.maintitle {
+	margin-top: 90px;
+	font-family: 'Rubik';
+	font-size: calc(25px + 2vw);
+	text-align: center;
+	color: #ffffff;
+	font-weight: normal;
+	text-decoration: underline white;
+	margin-bottom: 15px;
+}
+
+h2 { 
+	font-family: 'Rubik';
+	font-size: calc(15px + 1.25vw);
+	text-align: left;
+	color: #ffffff;
+	font-weight: lighter;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+p {
+	font-family: 'Rubik';
+	font-size: calc(10px + 0.75vw);
+	text-align: left;
+	color: #ffffff;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	word-break: normal;
+	margin-left: 10px;
+}
+/* making it so when a page is less than 600px wide, the styling of the images change to make them bigger and easier to read the text within while having a maximum and minimum size limit.*/
+@media screen and (min-width: 600px) {
+	
+.responsiveimg {
+	width: 85%;
+	max-width: 950px;
+	height: auto;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.responsiveimg {
+		width: 100%;
+		height: auto;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+		
+	}
+}
+/* making it so when a page is less than 600px wide, the styling of the images change to make them bigger and easier to read the text within while having a maximum and minimum size limit however these limits are smaller than the ones set in the previous media query, to produce smaller images.*/
+@media screen and (min-width: 600px) {
+	
+	.responsiveimgSmaller {
+		width: 85%;
+		max-width: 800px;
+		height: auto;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		}
+	}
+	
+	@media screen and (max-width: 600px) {
+		
+		.responsiveimgSmaller {
+			width: 100%;
+			height: auto;
+			display: flex;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+figcaption {
+	font-family: 'Rubik';
+	font-size: calc(12px - (9px - 1vw));
+	color: white;
+	background-color: #282825;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+	max-width: 760px;
+	border-radius: 10px;
+}
+
+abbr {
+	text-decoration:underline;
+}
+
+a {
+	text-decoration: underline;
+	text-decoration-color: #ffffff;
+	background-color: #d20a1a;
+	padding-left: 1px;
+	padding-right: 1px;
+	border-radius: 2px;
+	color: #ffffff;
+}
+/* adding space to the bottom of some elements*/
+.margined {
+	margin-bottom: 10px;
+}
+/* allows the table to overflow horizontally and lets the overflown content be scrolled to*/
+.overflow {
+	overflow-x:auto;
+}
+table {
+width: 99%;
+min-width: 560px;
+margin-left: auto;
+margin-right: auto;
+table-layout: fixed;
+margin-bottom: 5px;
+}
+th, td {
+
+	border-radius: 3px;
+	background-color: #282825;
+	padding: 5px;
+	font-size: calc(14px + (1vw - 11px));
+	text-overflow:ellipsis;
+	word-wrap:normal;
+	
+}
+th {
+	font-family: 'Rubik';
+	color: #ffffff;
+}
+td {
+	color: #ffffff;
+	font-family: 'Rubik';
+}
+/* styling specifically for wednesday in the timetable table*/
+.wedtt {
+	text-align: center;
+}
+/* used to make the days of the week bold without having to use <strong>
+.day {
+	text-align: center;
+	font-weight: bold;
+}
+/* targeting the message within the last row of the table only*/
+.tablemessage{
+	font-family: 'Rubik';
+	font-size: calc(3px + 1.2vw);
+	color: white;
+	background-color: #282825;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+	max-width: 760px;
+	border-radius: 10px;
+}
+/* adding animation to the sumbit button of the contact form*/
+input[type=submit]{
+	outline: #1d1d1b;
+	cursor: pointer;
+	box-shadow: 0 6px #000000;
+	text-shadow: 1px 1px #000000;
+}
+input[type=submit]:hover{
+	transform: scale(1.05);
+	background-color: #1d1d1b;
+	transition-duration: 0.7s;
+}
+
+input[type=submit]:active {
+	transform: scale(1.05);
+	background-color: #1d1d1b;
+	box-shadow: 0 3px #000000;
+	transform: translateY(3px);
+	transition-duration: 0ms;
+  }
+/* in order to style the surroundings of the contact form */
+.contactformcontainer{
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Rubik';
+	color: #ffffff;
+	font-size: calc(10px + 0.75vw);
+	justify-content: center;
+	display: flex;
+	justify-content: left;
+	background-color: #1d1d1b;
+	width: 90%;
+	margin-bottom: 5px;
+
+}
+fieldset input {
+	width: 200px;
+	font-family: 'Rubik';
+	font-size: calc(6px + 1vw);
+	color: #ffffff;
+	border-radius: 10px;
+	background-color: #282825;
+	
+}
+/* targeting only the email input box */
+.emailbox {
+	width:300px;
+}
+fieldset textarea {
+	width: 100%;
+	height: 150px;
+	border-radius: 10px;
+	font-family: 'Rubik';
+	font-size: calc(6px + 1vw);
+	color: #ffffff;
+	background-color: #282825;
+}
+/* making the submit form fit the width of the page*/
+.myform {
+	width: 100%;
+}
+
+footer{
+	width: fit-content;
+	background-color: #282825;
+	justify-content: center;
+	margin-right: auto;
+	margin-left: auto;	
+	border-radius: 10px;
+}
+/*affecting only the text in the footer */
+.bottom{
+	text-align: center;
+	font-size: calc(6px + 0.75vw);
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 6px;
+}
+/* adding spaces between each <p> to create a new paragraph */
+.newparagraph{
+	margin-bottom: 15px;
+}
